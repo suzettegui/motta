@@ -10,22 +10,18 @@
         <div class="container">
             <!-- Logo dynamique -->
             <div class="logo">
-                <a href="<?php echo home_url(); ?>">
-                    <?php
-                    if (function_exists('the_custom_logo') && has_custom_logo()) {
-                        the_custom_logo(); // Affiche le logo défini dans l'administration
-                    } else {
-                        // Logo par défaut si aucun logo n'est défini
-                        echo '<img src="http://localhost:10028/wp-content/uploads/2025/01/Logo.png" alt="Logo Nathalie Mota">';
-                    }
-                    ?>
-                </a>
-            </div>
-            <!-- Titre et description du site -->
-            <div class="site-info">
-                <h1><?php bloginfo('name'); ?></h1>
-                <p><?php bloginfo('description'); ?></p>
-            </div>
+    <a href="<?php echo home_url(); ?>">
+        <?php
+        if (function_exists('the_custom_logo') && has_custom_logo()) {
+            the_custom_logo(); // Logo dynamique
+        } else {
+            // Logo par défaut si aucun logo n'est défini
+            echo '<img src="http://localhost:10028/wp-content/uploads/2025/01/Logo.png" alt="Logo Nathalie Mota">';
+        }
+        ?>
+    </a>
+</div>
+
             <!-- Menu principal -->
             <nav class="main-menu">
                 <?php
@@ -38,4 +34,8 @@
                 ?>
             </nav>
         </div>
-    </header>
+     <!-- Conteneur avec l'image et le titre -->
+     <div class="hero-section" style="background-image: url('http://localhost:10028/wp-content/uploads/2025/01/nathalie-11-scaled.jpeg');">
+        <h1 class="hero-title">Photographe Event</h1>
+    </div>
+</header>
